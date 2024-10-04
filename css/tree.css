@@ -1,0 +1,29 @@
+/* tree */
+#container1 circle {
+    fill: rgb(255, 255, 255);
+    stroke: black;
+    stroke-width: 2px;
+}
+
+#container1 line {
+    fill: none;
+    stroke: #000000;
+    stroke-width: 2px;
+}
+  
+#container1 text {
+    pointer-events: none;
+    font-family: 'Playfair Display', serif;
+}
+
+
+#predTree line {
+    fill: none;
+    stroke: #000000;
+    stroke-width: 1px;
+}
+
+#predTree text {
+    font-family: serif;
+    font-size: 20px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Visualization of Lindell's isomorphic algorithm for trees</title>
+        <meta name="author" content="Tien Hung Ngo">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/trace.css">
+        <link rel="stylesheet" href="css/tree.css">
+        <link rel="icon" type="image/svg+xml" href="svg/cong.svg" sizes="any">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+        <!-- <script src="https://unpkg.com/d3@5.15.0/dist/d3.min.js"></script> -->
+        <script src="js/d3min.js"></script>
+    </head>
+    <body>
+        <h1>Visualization of Lindell's isomorphic algorithm for trees</h1>
+        <div id=fb>
+            <button id="expand">Open Trace</button>
+            <div id="anchor">
+                <p id="exp">Explanation</p>
+            </div>
+            <p id="step">i</p>
+        </div>
+        <div id="expandDiv"></div>
+        <div id="container1"></div>
+        <div id="container2">
+            <div class="ul-div" id="var-div">
+                <p>Variables</p>
+                <div class="l-wrap">
+                    <table id="vars"></table>
+                </div>
+            </div>
+            <div class="ul-div" id="stk-div">
+                <p>Stack</p>
+                <div class="l-wrap" id="stk-scroll">
+            </div>
+            </div>
+            <div id="tab-div">
+                <div class="tab">
+                    <button class="tablinks" id="flowBtn" onclick="openTab(event, 'Controlflow Graph')">Controlflow Graph</button>
+                    <button class="tablinks" id="predBtn" onclick="openTab(event, 'Predicate Tree')">Predicate Tree</button>
+                </div>
+                <div id="Controlflow Graph" class="tabcontent">
+
+                </div>
+                <div id="Predicate Tree" class="tabcontent">
+
+                </div>
+            </div>
+        </div>
+        <div id="buttons">
+            <button id="prev" class="button">prev</button>
+            <button id="next" class="button">next</button>
+        </div>
+        <!-- <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. -->
+        <script>
+            function openTab(evt, name) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(name).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+        </script>
+        <script src="js/data/layoutTree.js"></script>
+        <script src="js/data/cfg.js"></script>
+        <script src="js/data/csv.js"></script>
+        <script src="js/variable/variable.js"></script>
+        <script src="js/variable/treeNode.js"></script>
+        <script src="js/variable/tree.js"></script>
+        <script src="js/variable/stack.js"></script>
+        <script src="js/variable/pvar.js"></script>
+        <script src="js/trace/traceOp.js"></script>
+        <script src="js/trace/predicateTree.js"></script>
+        <script src="js/trace/controlFlow.js"></script>
+        <script src="js/trace/traceManager.js"></script>
+        <script src="js/trace/traceVars.js"></script>
+        <script src="js/trace/traceView.js"></script>
+        <script src="js/trace/trace.js"></script>
+        <script src="js/trace/traceManager.js"></script>
+        <script src="js/buttonManager.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,121 @@
+
+table#trace {
+    position: absolute;
+    top: 90px;
+    margin: 0;
+    margin-left: 5px;
+    z-index: 1;
+    border-collapse: collapse;
+}
+
+table .table2 {
+    border-collapse: collapse;
+    table-layout: fixed; 
+    width: 180vh;
+}
+
+#trace td {
+    background-color: rgb(241, 255, 239);
+    border: solid;
+    border-width: 1px;
+    border-color: rgb(141, 139, 139);
+    padding: 0;
+}
+
+#trace td.rowCall {
+    background-color: rgb(218, 255, 252);
+    border-width: 2px;
+}
+
+#trace td button.open {
+    position: relative;
+    cursor: pointer;
+    text-align: bottom;
+    color: blue;
+    font-size: large;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+}
+
+#trace td button.open:hover {
+    background-color: rgb(221, 221, 221);
+    color: rgb(255, 0, 0);
+}
+
+#trace td p.calls {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+    position: relative;
+    left: 10px;
+}
+
+#trace td p.calls:hover {
+    color: rgb(255, 0, 0);
+}
+
+#trace td p.step {
+    cursor: pointer;
+    position: relative;
+    left: 10px;
+    text-decoration: underline;
+    color: rgb(17, 0, 255);
+}
+
+#trace td p.step:hover {
+    color: rgb(255, 0, 0);
+}
+
+#trace td ul {
+    margin: 0;
+    padding: 0;
+    background-color:	#30cb00
+}
+
+#trace td li {
+    display: inline;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+#trace li.path {
+    cursor: pointer;
+    text-decoration: underline;
+    color: blue;
+}
+
+#trace li.path:hover {
+    color: rgb(255, 0, 0);
+}
+
+#trace li.currProgram {
+    font-weight: bolder;
+}
+
+#trace #traceDiv {
+    max-height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#vars {
+    border-collapse: collapse;
+    table-layout: fixed;
+    overflow-y: auto;
+    display: block;
+    border-spacing: 0;
+}
+
+#vars td {
+    border-bottom: solid 1px black;
+    width: 100%;
+    font-size: 30px;
+    padding-left: 5px;
+    padding-right: 40px;
+}
+
+#var-div p {
+    border-bottom: solid 2px black;
+}
+ 
+
